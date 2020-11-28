@@ -1,0 +1,27 @@
+	USE classmodels;
+
+1.
+	SELECT customerName, phone,addressLine1, city
+	FROM Customers
+	WHERE city IN ('Nantes','Lyon');
+
+2.
+	SELECT orderNumber, shippedDate, status
+	FROM Orders
+	WHERE shippedDate BETWEEN '2003-01-10' AND '2003-03-10';
+
+3.
+	SELECT productName, productLine, productScale, productVendor, quantityInStock, buyPrice
+     	FROM Products
+   	WHERE productLine LIKE '%_CARS%'
+    	GROUP BY productLine;
+
+4.
+	SELECT productCode, productName, quantityInStock
+	From Products
+	ORDER BY quantityInStock DESC
+	LIMIT 10;
+
+5. 
+	SELECT productName, quantityInStock, buyPrice, (quantityInStock*buyPrice) as productInventory
+	FROM Products;
