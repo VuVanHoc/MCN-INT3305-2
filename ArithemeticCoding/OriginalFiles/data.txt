@@ -1,0 +1,1488 @@
+[ { "name":"John", "age":30, "void DeleteAtHead() {
+    if(head == NULL) {
+        return;
+    }
+    head = head->next;
+    head->prev = NULL;
+}
+ 
+
+void DeleteAtTail() {
+    if(head == NULL) {
+        return;
+    }
+    tail = tail->prev;
+    tail->next = NULL;
+}
+ 
+
+void Print() {
+    struct Node* temp = head;
+    printf("\nForward: ");
+    while(temp != NULL) {
+        printf("%d ",temp->data);
+        temp = temp->next;
+    }
+    printf("\n");
+}
+use classicmodels;
+
+cau1:
+	SELECT productName 
+	FROM products 
+	WHERE productCode in (select distinct productCode 
+			       from orderDetails 
+			       where (select orderDate 
+				  from orders 
+				  where orderDate BETWEEN '2005-03-01' AND '2005-03-31' AND orderDetails.orderNumber=orders.orderNumber));
+cau2:
+	SELECT distinct p.productName
+	FROM products p
+	INNER JOIN  orderDetails od on p.productCode=od.productCode
+	INNER JOIN orders o on od.orderNumber=o.orderNumber
+	WHERE o.orderDate BETWEEN '2005-03-01' AND '2005-03-31';
+cau3:
+	SELECT *
+	FROM orders
+	WHERE YEAR(orderDate)=(select YEAR(MAX(orderDate)) from orders) and MONTH(orderDate)=(select MONTH(MAX(orderDate)) from orders);
+Câu4:
+	SELECT *,(select (quantityOrdered*priceEach) from orderDetails od where orderNumber=o.orderNumber group by od.orderNumber) as total 
+	FROM orders o;
+Cau5:
+	SELECT o.*,(od.quantityOrdered*od.priceEach) as total 
+	FROM orders o INNER JOIN orderDetails od on o.orderNumber= od.orderNumber
+	GROUP BY o.orderNumber;use classicmodels;
+
+cau1:
+	SELECT productName 
+	FROM products 
+	WHERE productCode in (select distinct productCode 
+			       from orderDetails 
+			       where (select orderDate 
+				  from orders 
+				  where orderDate BETWEEN '2005-03-01' AND '2005-03-31' AND orderDetails.orderNumber=orders.orderNumber));
+cau2:
+	SELECT distinct p.productName
+	FROM products p
+	INNER JOIN  orderDetails od on p.productCode=od.productCode
+	INNER JOIN orders o on od.orderNumber=o.orderNumber
+	WHERE o.orderDate BETWEEN '2005-03-01' AND '2005-03-31';
+cau3:
+	SELECT *
+	FROM orders
+	WHERE YEAR(orderDate)=(select YEAR(MAX(orderDate)) from orders) and MONTH(orderDate)=(select MONTH(MAX(orderDate)) from orders);
+Câu4:
+	SELECT *,(select (quantityOrdered*priceEach) from orderDetails od where orderNumber=o.orderNumber group by od.orderNumber) as total 
+	FROM orders o;
+Cau5:
+	SELECT o.*,(od.quantityOrdered*od.priceEach) as total 
+	FROM orders o INNER JOIN orderDetails od on o.orderNumber= od.orderNumber
+	GROUP BY o.orderNumber;use classicmodels;
+
+cau1:
+	SELECT productName 
+	FROM products 
+	WHERE productCode in (select distinct productCode 
+			       from orderDetails 
+			       where (select orderDate 
+				  from orders 
+				  where orderDate BETWEEN '2005-03-01' AND '2005-03-31' AND orderDetails.orderNumber=orders.orderNumber));
+cau2:
+	SELECT distinct p.productName
+	FROM products p
+	INNER JOIN  orderDetails od on p.productCode=od.productCode
+	INNER JOIN orders o on od.orderNumber=o.orderNumber
+	WHERE o.orderDate BETWEEN '2005-03-01' AND '2005-03-31';
+cau3:
+	SELECT *
+	FROM orders
+	WHERE YEAR(orderDate)=(select YEAR(MAX(orderDate)) from orders) and MONTH(orderDate)=(select MONTH(MAX(orderDate)) from orders);
+Câu4:
+	SELECT *,(select (quantityOrdered*priceEach) from orderDetails od where orderNumber=o.orderNumber group by od.orderNumber) as total 
+	FROM orders o;
+Cau5:
+	SELECT o.*,(od.quantityOrdered*od.priceEach) as total 
+	FROM orders o INNER JOIN orderDetails od on o.orderNumber= od.orderNumber
+	GROUP BY o.orderNumber;use classicmodels;
+
+cau1:
+	SELECT productName 
+	FROM products 
+	WHERE productCode in (select distinct productCode 
+			       from orderDetails 
+			       where (select orderDate 
+				  from orders 
+				  where orderDate BETWEEN '2005-03-01' AND '2005-03-31' AND orderDetails.orderNumber=orders.orderNumber));
+cau2:
+	SELECT distinct p.productName
+	FROM products p
+	INNER JOIN  orderDetails od on p.productCode=od.productCode
+	INNER JOIN orders o on od.orderNumber=o.orderNumber
+	WHERE o.orderDate BETWEEN '2005-03-01' AND '2005-03-31';
+cau3:
+	SELECT *
+	FROM orders
+	WHERE YEAR(orderDate)=(select YEAR(MAX(orderDate)) from orders) and MONTH(orderDate)=(select MONTH(MAX(orderDate)) from orders);
+Câu4:
+	SELECT *,(select (quantityOrdered*priceEach) from orderDetails od where orderNumber=o.orderNumber group by od.orderNumber) as total 
+	FROM orders o;
+Cau5:
+	SELECT o.*,(od.quantityOrdered*od.priceEach) as total 
+	FROM orders o INNER JOIN orderDetails od on o.orderNumber= od.orderNumber
+	GROUP BY o.orderNumber;use classicmodels;
+
+cau1:
+	SELECT productName 
+	FROM products 
+	WHERE productCode in (select distinct productCode 
+			       from orderDetails 
+			       where (select orderDate 
+				  from orders 
+				  where orderDate BETWEEN '2005-03-01' AND '2005-03-31' AND orderDetails.orderNumber=orders.orderNumber));
+cau2:
+	SELECT distinct p.productName
+	FROM products p
+	INNER JOIN  orderDetails od on p.productCode=od.productCode
+	INNER JOIN orders o on od.orderNumber=o.orderNumber
+	WHERE o.orderDate BETWEEN '2005-03-01' AND '2005-03-31';
+cau3:
+	SELECT *
+	FROM orders
+	WHERE YEAR(orderDate)=(select YEAR(MAX(orderDate)) from orders) and MONTH(orderDate)=(select MONTH(MAX(orderDate)) from orders);
+Câu4:
+	SELECT *,(select (quantityOrdered*priceEach) from orderDetails od where orderNumber=o.orderNumber group by od.orderNumber) as total 
+	FROM orders o;
+Cau5:
+	SELECT o.*,(od.quantityOrdered*od.priceEach) as total 
+	FROM orders o INNER JOIN orderDetails od on o.orderNumber= od.orderNumber
+	GROUP BY o.orderNumber;use classicmodels;
+
+cau1:
+	SELECT productName 
+	FROM products 
+	WHERE productCode in (select distinct productCode 
+			       from orderDetails 
+			       where (select orderDate 
+				  from orders 
+				  where orderDate BETWEEN '2005-03-01' AND '2005-03-31' AND orderDetails.orderNumber=orders.orderNumber));
+cau2:
+	SELECT distinct p.productName
+	FROM products p
+	INNER JOIN  orderDetails od on p.productCode=od.productCode
+	INNER JOIN orders o on od.orderNumber=o.orderNumber
+	WHERE o.orderDate BETWEEN '2005-03-01' AND '2005-03-31';
+cau3:
+	SELECT *
+	FROM orders
+	WHERE YEAR(orderDate)=(select YEAR(MAX(orderDate)) from orders) and MONTH(orderDate)=(select MONTH(MAX(orderDate)) from orders);
+Câu4:
+	SELECT *,(select (quantityOrdered*priceEach) from orderDetails od where orderNumber=o.orderNumber group by od.orderNumber) as total 
+	FROM orders o;
+Cau5:
+	SELECT o.*,(od.quantityOrdered*od.priceEach) as total 
+	FROM orders o INNER JOIN orderDetails od on o.orderNumber= od.orderNumber
+	GROUP BY o.orderNumber;use classicmodels;
+
+cau1:
+	SELECT productName 
+	FROM products 
+	WHERE productCode in (select distinct productCode 
+			       from orderDetails 
+			       where (select orderDate 
+				  from orders 
+				  where orderDate BETWEEN '2005-03-01' AND '2005-03-31' AND orderDetails.orderNumber=orders.orderNumber));
+cau2:
+	SELECT distinct p.productName
+	FROM products p
+	INNER JOIN  orderDetails od on p.productCode=od.productCode
+	INNER JOIN orders o on od.orderNumber=o.orderNumber
+	WHERE o.orderDate BETWEEN '2005-03-01' AND '2005-03-31';
+cau3:
+	SELECT *
+	FROM orders
+	WHERE YEAR(orderDate)=(select YEAR(MAX(orderDate)) from orders) and MONTH(orderDate)=(select MONTH(MAX(orderDate)) from orders);
+Câu4:
+	SELECT *,(select (quantityOrdered*priceEach) from orderDetails od where orderNumber=o.orderNumber group by od.orderNumber) as total 
+	FROM orders o;
+Cau5:
+	SELECT o.*,(od.quantityOrdered*od.priceEach) as total 
+	FROM orders o INNER JOIN orderDetails od on o.orderNumber= od.orderNumber
+	GROUP BY o.orderNumber;use classicmodels;
+
+cau1:
+	SELECT productName 
+	FROM products 
+	WHERE productCode in (select distinct productCode 
+			       from orderDetails 
+			       where (select orderDate 
+				  from orders 
+				  where orderDate BETWEEN '2005-03-01' AND '2005-03-31' AND orderDetails.orderNumber=orders.orderNumber));
+cau2:
+	SELECT distinct p.productName
+	FROM products p
+	INNER JOIN  orderDetails od on p.productCode=od.productCode
+	INNER JOIN orders o on od.orderNumber=o.orderNumber
+	WHERE o.orderDate BETWEEN '2005-03-01' AND '2005-03-31';
+cau3:
+	SELECT *
+	FROM orders
+	WHERE YEAR(orderDate)=(select YEAR(MAX(orderDate)) from orders) and MONTH(orderDate)=(select MONTH(MAX(orderDate)) from orders);
+Câu4:
+	SELECT *,(select (quantityOrdered*priceEach) from orderDetails od where orderNumber=o.orderNumber group by od.orderNumber) as total 
+	FROM orders o;
+Cau5:
+	SELECT o.*,(od.quantityOrdered*od.priceEach) as total 
+	FROM orders o INNER JOIN orderDetails od on o.orderNumber= od.orderNumber
+	GROUP BY o.orderNumber;use classicmodels;
+
+cau1:
+	SELECT productName 
+	FROM products 
+	WHERE productCode in (select distinct productCode 
+			       from orderDetails 
+			       where (select orderDate 
+				  from orders 
+				  where orderDate BETWEEN '2005-03-01' AND '2005-03-31' AND orderDetails.orderNumber=orders.orderNumber));
+cau2:
+	SELECT distinct p.productName
+	FROM products p
+	INNER JOIN  orderDetails od on p.productCode=od.productCode
+	INNER JOIN orders o on od.orderNumber=o.orderNumber
+	WHERE o.orderDate BETWEEN '2005-03-01' AND '2005-03-31';
+cau3:
+	SELECT *
+	FROM orders
+	WHERE YEAR(orderDate)=(select YEAR(MAX(orderDate)) from orders) and MONTH(orderDate)=(select MONTH(MAX(orderDate)) from orders);
+Câu4:
+	SELECT *,(select (quantityOrdered*priceEach) from orderDetails od where orderNumber=o.orderNumber group by od.orderNumber) as total 
+	FROM orders o;
+Cau5:
+	SELECT o.*,(od.quantityOrdered*od.priceEach) as total 
+	FROM orders o INNER JOIN orderDetails od on o.orderNumber= od.orderNumber
+	GROUP BY o.orderNumber;use classicmodels;
+
+cau1:
+	SELECT productName 
+	FROM products 
+	WHERE productCode in (select distinct productCode 
+			       from orderDetails 
+			       where (select orderDate 
+				  from orders 
+				  where orderDate BETWEEN '2005-03-01' AND '2005-03-31' AND orderDetails.orderNumber=orders.orderNumber));
+cau2:
+	SELECT distinct p.productName
+	FROM products p
+	INNER JOIN  orderDetails od on p.productCode=od.productCode
+	INNER JOIN orders o on od.orderNumber=o.orderNumber
+	WHERE o.orderDate BETWEEN '2005-03-01' AND '2005-03-31';
+cau3:
+	SELECT *
+	FROM orders
+	WHERE YEAR(orderDate)=(select YEAR(MAX(orderDate)) from orders) and MONTH(orderDate)=(select MONTH(MAX(orderDate)) from orders);
+Câu4:
+	SELECT *,(select (quantityOrdered*priceEach) from orderDetails od where orderNumber=o.orderNumber group by od.orderNumber) as total 
+	FROM orders o;
+Cau5:
+	SELECT o.*,(od.quantityOrdered*od.priceEach) as total 
+	FROM orders o INNER JOIN orderDetails od on o.orderNumber= od.orderNumber
+	GROUP BY o.orderNumber;use classicmodels;
+
+cau1:
+	SELECT productName 
+	FROM products 
+	WHERE productCode in (select distinct productCode 
+			       from orderDetails 
+			       where (select orderDate 
+				  from orders 
+				  where orderDate BETWEEN '2005-03-01' AND '2005-03-31' AND orderDetails.orderNumber=orders.orderNumber));
+cau2:
+	SELECT distinct p.productName
+	FROM products p
+	INNER JOIN  orderDetails od on p.productCode=od.productCode
+	INNER JOIN orders o on od.orderNumber=o.orderNumber
+	WHERE o.orderDate BETWEEN '2005-03-01' AND '2005-03-31';
+cau3:
+	SELECT *
+	FROM orders
+	WHERE YEAR(orderDate)=(select YEAR(MAX(orderDate)) from orders) and MONTH(orderDate)=(select MONTH(MAX(orderDate)) from orders);
+Câu4:
+	SELECT *,(select (quantityOrdered*priceEach) from orderDetails od where orderNumber=o.orderNumber group by od.orderNumber) as total 
+	FROM orders o;
+Cau5:
+	SELECT o.*,(od.quantityOrdered*od.priceEach) as total 
+	FROM orders o INNER JOIN orderDetails od on o.orderNumber= od.orderNumber
+	GROUP BY o.orderNumber;use classicmodels;
+
+cau1:
+	SELECT productName 
+	FROM products 
+	WHERE productCode in (select distinct productCode 
+			       from orderDetails 
+			       where (select orderDate 
+				  from orders 
+				  where orderDate BETWEEN '2005-03-01' AND '2005-03-31' AND orderDetails.orderNumber=orders.orderNumber));
+cau2:
+	SELECT distinct p.productName
+	FROM products p
+	INNER JOIN  orderDetails od on p.productCode=od.productCode
+	INNER JOIN orders o on od.orderNumber=o.orderNumber
+	WHERE o.orderDate BETWEEN '2005-03-01' AND '2005-03-31';
+cau3:
+	SELECT *
+	FROM orders
+	WHERE YEAR(orderDate)=(select YEAR(MAX(orderDate)) from orders) and MONTH(orderDate)=(select MONTH(MAX(orderDate)) from orders);
+Câu4:
+	SELECT *,(select (quantityOrdered*priceEach) from orderDetails od where orderNumber=o.orderNumber group by od.orderNumber) as total 
+	FROM orders o;
+Cau5:
+	SELECT o.*,(od.quantityOrdered*od.priceEach) as total 
+	FROM orders o INNER JOIN orderDetails od on o.orderNumber= od.orderNumber
+	GROUP BY o.orderNumber;use classicmodels;
+
+cau1:
+	SELECT productName 
+	FROM products 
+	WHERE productCode in (select distinct productCode 
+			       from orderDetails 
+			       where (select orderDate 
+				  from orders 
+				  where orderDate BETWEEN '2005-03-01' AND '2005-03-31' AND orderDetails.orderNumber=orders.orderNumber));
+cau2:
+	SELECT distinct p.productName
+	FROM products p
+	INNER JOIN  orderDetails od on p.productCode=od.productCode
+	INNER JOIN orders o on od.orderNumber=o.orderNumber
+	WHERE o.orderDate BETWEEN '2005-03-01' AND '2005-03-31';
+cau3:
+	SELECT *
+	FROM orders
+	WHERE YEAR(orderDate)=(select YEAR(MAX(orderDate)) from orders) and MONTH(orderDate)=(select MONTH(MAX(orderDate)) from orders);
+Câu4:
+	SELECT *,(select (quantityOrdered*priceEach) from orderDetails od where orderNumber=o.orderNumber group by od.orderNumber) as total 
+	FROM orders o;
+Cau5:
+	SELECT o.*,(od.quantityOrdered*od.priceEach) as total 
+	FROM orders o INNER JOIN orderDetails od on o.orderNumber= od.orderNumber
+	GROUP BY o.orderNumber;use classicmodels;
+
+cau1:
+	SELECT productName 
+	FROM products 
+	WHERE productCode in (select distinct productCode 
+			       from orderDetails 
+			       where (select orderDate 
+				  from orders 
+				  where orderDate BETWEEN '2005-03-01' AND '2005-03-31' AND orderDetails.orderNumber=orders.orderNumber));
+cau2:
+	SELECT distinct p.productName
+	FROM products p
+	INNER JOIN  orderDetails od on p.productCode=od.productCode
+	INNER JOIN orders o on od.orderNumber=o.orderNumber
+	WHERE o.orderDate BETWEEN '2005-03-01' AND '2005-03-31';
+cau3:
+	SELECT *
+	FROM orders
+	WHERE YEAR(orderDate)=(select YEAR(MAX(orderDate)) from orders) and MONTH(orderDate)=(select MONTH(MAX(orderDate)) from orders);
+Câu4:
+	SELECT *,(select (quantityOrdered*priceEach) from orderDetails od where orderNumber=o.orderNumber group by od.orderNumber) as total 
+	FROM orders o;
+Cau5:
+	SELECT o.*,(od.quantityOrdered*od.priceEach) as total 
+	FROM orders o INNER JOIN orderDetails od on o.orderNumber= od.orderNumber
+	GROUP BY o.orderNumber;use classicmodels;
+
+cau1:
+	SELECT productName 
+	FROM products 
+	WHERE productCode in (select distinct productCode 
+			       from orderDetails 
+			       where (select orderDate 
+				  from orders 
+				  where orderDate BETWEEN '2005-03-01' AND '2005-03-31' AND orderDetails.orderNumber=orders.orderNumber));
+cau2:
+	SELECT distinct p.productName
+	FROM products p
+	INNER JOIN  orderDetails od on p.productCode=od.productCode
+	INNER JOIN orders o on od.orderNumber=o.orderNumber
+	WHERE o.orderDate BETWEEN '2005-03-01' AND '2005-03-31';
+cau3:
+	SELECT *
+	FROM orders
+	WHERE YEAR(orderDate)=(select YEAR(MAX(orderDate)) from orders) and MONTH(orderDate)=(select MONTH(MAX(orderDate)) from orders);
+Câu4:
+	SELECT *,(select (quantityOrdered*priceEach) from orderDetails od where orderNumber=o.orderNumber group by od.orderNumber) as total 
+	FROM orders o;
+Cau5:
+	SELECT o.*,(od.quantityOrdered*od.priceEach) as total 
+	FROM orders o INNER JOIN orderDetails od on o.orderNumber= od.orderNumber
+	GROUP BY o.orderNumber;use classicmodels;
+
+cau1:
+	SELECT productName 
+	FROM products 
+	WHERE productCode in (select distinct productCode 
+			       from orderDetails 
+			       where (select orderDate 
+				  from orders 
+				  where orderDate BETWEEN '2005-03-01' AND '2005-03-31' AND orderDetails.orderNumber=orders.orderNumber));
+cau2:
+	SELECT distinct p.productName
+	FROM products p
+	INNER JOIN  orderDetails od on p.productCode=od.productCode
+	INNER JOIN orders o on od.orderNumber=o.orderNumber
+	WHERE o.orderDate BETWEEN '2005-03-01' AND '2005-03-31';
+cau3:
+	SELECT *
+	FROM orders
+	WHERE YEAR(orderDate)=(select YEAR(MAX(orderDate)) from orders) and MONTH(orderDate)=(select MONTH(MAX(orderDate)) from orders);
+Câu4:
+	SELECT *,(select (quantityOrdered*priceEach) from orderDetails od where orderNumber=o.orderNumber group by od.orderNumber) as total 
+	FROM orders o;
+Cau5:
+	SELECT o.*,(od.quantityOrdered*od.priceEach) as total 
+	FROM orders o INNER JOIN orderDetails od on o.orderNumber= od.orderNumber
+	GROUP BY o.orderNumber;use classicmodels;
+
+cau1:
+	SELECT productName 
+	FROM products 
+	WHERE productCode in (select distinct productCode 
+			       from orderDetails 
+			       where (select orderDate 
+				  from orders 
+				  where orderDate BETWEEN '2005-03-01' AND '2005-03-31' AND orderDetails.orderNumber=orders.orderNumber));
+cau2:
+	SELECT distinct p.productName
+	FROM products p
+	INNER JOIN  orderDetails od on p.productCode=od.productCode
+	INNER JOIN orders o on od.orderNumber=o.orderNumber
+	WHERE o.orderDate BETWEEN '2005-03-01' AND '2005-03-31';
+cau3:
+	SELECT *
+	FROM orders
+	WHERE YEAR(orderDate)=(select YEAR(MAX(orderDate)) from orders) and MONTH(orderDate)=(select MONTH(MAX(orderDate)) from orders);
+Câu4:
+	SELECT *,(select (quantityOrdered*priceEach) from orderDetails od where orderNumber=o.orderNumber group by od.orderNumber) as total 
+	FROM orders o;
+Cau5:
+	SELECT o.*,(od.quantityOrdered*od.priceEach) as total 
+	FROM orders o INNER JOIN orderDetails od on o.orderNumber= od.orderNumber
+	GROUP BY o.orderNumber;use classicmodels;
+
+cau1:
+	SELECT productName 
+	FROM products 
+	WHERE productCode in (select distinct productCode 
+			       from orderDetails 
+			       where (select orderDate 
+				  from orders 
+				  where orderDate BETWEEN '2005-03-01' AND '2005-03-31' AND orderDetails.orderNumber=orders.orderNumber));
+cau2:
+	SELECT distinct p.productName
+	FROM products p
+	INNER JOIN  orderDetails od on p.productCode=od.productCode
+	INNER JOIN orders o on od.orderNumber=o.orderNumber
+	WHERE o.orderDate BETWEEN '2005-03-01' AND '2005-03-31';
+cau3:
+	SELECT *
+	FROM orders
+	WHERE YEAR(orderDate)=(select YEAR(MAX(orderDate)) from orders) and MONTH(orderDate)=(select MONTH(MAX(orderDate)) from orders);
+Câu4:
+	SELECT *,(select (quantityOrdered*priceEach) from orderDetails od where orderNumber=o.orderNumber group by od.orderNumber) as total 
+	FROM orders o;
+Cau5:
+	SELECT o.*,(od.quantityOrdered*od.priceEach) as total 
+	FROM orders o INNER JOIN orderDetails od on o.orderNumber= od.orderNumber
+	GROUP BY o.orderNumber;use classicmodels;
+
+cau1:
+	SELECT productName 
+	FROM products 
+	WHERE productCode in (select distinct productCode 
+			       from orderDetails 
+			       where (select orderDate 
+				  from orders 
+				  where orderDate BETWEEN '2005-03-01' AND '2005-03-31' AND orderDetails.orderNumber=orders.orderNumber));
+cau2:
+	SELECT distinct p.productName
+	FROM products p
+	INNER JOIN  orderDetails od on p.productCode=od.productCode
+	INNER JOIN orders o on od.orderNumber=o.orderNumber
+	WHERE o.orderDate BETWEEN '2005-03-01' AND '2005-03-31';
+cau3:
+	SELECT *
+	FROM orders
+	WHERE YEAR(orderDate)=(select YEAR(MAX(orderDate)) from orders) and MONTH(orderDate)=(select MONTH(MAX(orderDate)) from orders);
+Câu4:
+	SELECT *,(select (quantityOrdered*priceEach) from orderDetails od where orderNumber=o.orderNumber group by od.orderNumber) as total 
+	FROM orders o;
+Cau5:
+	SELECT o.*,(od.quantityOrdered*od.priceEach) as total 
+	FROM orders o INNER JOIN orderDetails od on o.orderNumber= od.orderNumber
+	GROUP BY o.orderNumber;use classicmodels;
+
+cau1:
+	SELECT productName 
+	FROM products 
+	WHERE productCode in (select distinct productCode 
+			       from orderDetails 
+			       where (select orderDate 
+				  from orders 
+				  where orderDate BETWEEN '2005-03-01' AND '2005-03-31' AND orderDetails.orderNumber=orders.orderNumber));
+cau2:
+	SELECT distinct p.productName
+	FROM products p
+	INNER JOIN  orderDetails od on p.productCode=od.productCode
+	INNER JOIN orders o on od.orderNumber=o.orderNumber
+	WHERE o.orderDate BETWEEN '2005-03-01' AND '2005-03-31';
+cau3:
+	SELECT *
+	FROM orders
+	WHERE YEAR(orderDate)=(select YEAR(MAX(orderDate)) from orders) and MONTH(orderDate)=(select MONTH(MAX(orderDate)) from orders);
+Câu4:
+	SELECT *,(select (quantityOrdered*priceEach) from orderDetails od where orderNumber=o.orderNumber group by od.orderNumber) as total 
+	FROM orders o;
+Cau5:
+	SELECT o.*,(od.quantityOrdered*od.priceEach) as total 
+	FROM orders o INNER JOIN orderDetails od on o.orderNumber= od.orderNumber
+	GROUP BY o.orderNumber;use classicmodels;
+
+cau1:
+	SELECT productName 
+	FROM products 
+	WHERE productCode in (select distinct productCode 
+			       from orderDetails 
+			       where (select orderDate 
+				  from orders 
+				  where orderDate BETWEEN '2005-03-01' AND '2005-03-31' AND orderDetails.orderNumber=orders.orderNumber));
+cau2:
+	SELECT distinct p.productName
+	FROM products p
+	INNER JOIN  orderDetails od on p.productCode=od.productCode
+	INNER JOIN orders o on od.orderNumber=o.orderNumber
+	WHERE o.orderDate BETWEEN '2005-03-01' AND '2005-03-31';
+cau3:
+	SELECT *
+	FROM orders
+	WHERE YEAR(orderDate)=(select YEAR(MAX(orderDate)) from orders) and MONTH(orderDate)=(select MONTH(MAX(orderDate)) from orders);
+Câu4:
+	SELECT *,(select (quantityOrdered*priceEach) from orderDetails od where orderNumber=o.orderNumber group by od.orderNumber) as total 
+	FROM orders o;
+Cau5:
+	SELECT o.*,(od.quantityOrdered*od.priceEach) as total 
+	FROM orders o INNER JOIN orderDetails od on o.orderNumber= od.orderNumber
+	GROUP BY o.orderNumber;use classicmodels;
+
+cau1:
+	SELECT productName 
+	FROM products 
+	WHERE productCode in (select distinct productCode 
+			       from orderDetails 
+			       where (select orderDate 
+				  from orders 
+				  where orderDate BETWEEN '2005-03-01' AND '2005-03-31' AND orderDetails.orderNumber=orders.orderNumber));
+cau2:
+	SELECT distinct p.productName
+	FROM products p
+	INNER JOIN  orderDetails od on p.productCode=od.productCode
+	INNER JOIN orders o on od.orderNumber=o.orderNumber
+	WHERE o.orderDate BETWEEN '2005-03-01' AND '2005-03-31';
+cau3:
+	SELECT *
+	FROM orders
+	WHERE YEAR(orderDate)=(select YEAR(MAX(orderDate)) from orders) and MONTH(orderDate)=(select MONTH(MAX(orderDate)) from orders);
+Câu4:
+	SELECT *,(select (quantityOrdered*priceEach) from orderDetails od where orderNumber=o.orderNumber group by od.orderNumber) as total 
+	FROM orders o;
+Cau5:
+	SELECT o.*,(od.quantityOrdered*od.priceEach) as total 
+	FROM orders o INNER JOIN orderDetails od on o.orderNumber= od.orderNumber
+	GROUP BY o.orderNumber;use classicmodels;
+
+cau1:
+	SELECT productName 
+	FROM products 
+	WHERE productCode in (select distinct productCode 
+			       from orderDetails 
+			       where (select orderDate 
+				  from orders 
+				  where orderDate BETWEEN '2005-03-01' AND '2005-03-31' AND orderDetails.orderNumber=orders.orderNumber));
+cau2:
+	SELECT distinct p.productName
+	FROM products p
+	INNER JOIN  orderDetails od on p.productCode=od.productCode
+	INNER JOIN orders o on od.orderNumber=o.orderNumber
+	WHERE o.orderDate BETWEEN '2005-03-01' AND '2005-03-31';
+cau3:
+	SELECT *
+	FROM orders
+	WHERE YEAR(orderDate)=(select YEAR(MAX(orderDate)) from orders) and MONTH(orderDate)=(select MONTH(MAX(orderDate)) from orders);
+Câu4:
+	SELECT *,(select (quantityOrdered*priceEach) from orderDetails od where orderNumber=o.orderNumber group by od.orderNumber) as total 
+	FROM orders o;
+Cau5:
+	SELECT o.*,(od.quantityOrdered*od.priceEach) as total 
+	FROM orders o INNER JOIN orderDetails od on o.orderNumber= od.orderNumber
+	GROUP BY o.orderNumber;use classicmodels;
+
+cau1:
+	SELECT productName 
+	FROM products 
+	WHERE productCode in (select distinct productCode 
+			       from orderDetails 
+			       where (select orderDate 
+				  from orders 
+				  where orderDate BETWEEN '2005-03-01' AND '2005-03-31' AND orderDetails.orderNumber=orders.orderNumber));
+cau2:
+	SELECT distinct p.productName
+	FROM products p
+	INNER JOIN  orderDetails od on p.productCode=od.productCode
+	INNER JOIN orders o on od.orderNumber=o.orderNumber
+	WHERE o.orderDate BETWEEN '2005-03-01' AND '2005-03-31';
+cau3:
+	SELECT *
+	FROM orders
+	WHERE YEAR(orderDate)=(select YEAR(MAX(orderDate)) from orders) and MONTH(orderDate)=(select MONTH(MAX(orderDate)) from orders);
+Câu4:
+	SELECT *,(select (quantityOrdered*priceEach) from orderDetails od where orderNumber=o.orderNumber group by od.orderNumber) as total 
+	FROM orders o;
+Cau5:
+	SELECT o.*,(od.quantityOrdered*od.priceEach) as total 
+	FROM orders o INNER JOIN orderDetails od on o.orderNumber= od.orderNumber
+	GROUP BY o.orderNumber;use classicmodels;
+
+cau1:
+	SELECT productName 
+	FROM products 
+	WHERE productCode in (select distinct productCode 
+			       from orderDetails 
+			       where (select orderDate 
+				  from orders 
+				  where orderDate BETWEEN '2005-03-01' AND '2005-03-31' AND orderDetails.orderNumber=orders.orderNumber));
+cau2:
+	SELECT distinct p.productName
+	FROM products p
+	INNER JOIN  orderDetails od on p.productCode=od.productCode
+	INNER JOIN orders o on od.orderNumber=o.orderNumber
+	WHERE o.orderDate BETWEEN '2005-03-01' AND '2005-03-31';
+cau3:
+	SELECT *
+	FROM orders
+	WHERE YEAR(orderDate)=(select YEAR(MAX(orderDate)) from orders) and MONTH(orderDate)=(select MONTH(MAX(orderDate)) from orders);
+Câu4:
+	SELECT *,(select (quantityOrdered*priceEach) from orderDetails od where orderNumber=o.orderNumber group by od.orderNumber) as total 
+	FROM orders o;
+Cau5:
+	SELECT o.*,(od.quantityOrdered*od.priceEach) as total 
+	FROM orders o INNER JOIN orderDetails od on o.orderNumber= od.orderNumber
+	GROUP BY o.orderNumber;use classicmodels;
+
+cau1:
+	SELECT productName 
+	FROM products 
+	WHERE productCode in (select distinct productCode 
+			       from orderDetails 
+			       where (select orderDate 
+				  from orders 
+				  where orderDate BETWEEN '2005-03-01' AND '2005-03-31' AND orderDetails.orderNumber=orders.orderNumber));
+cau2:
+	SELECT distinct p.productName
+	FROM products p
+	INNER JOIN  orderDetails od on p.productCode=od.productCode
+	INNER JOIN orders o on od.orderNumber=o.orderNumber
+	WHERE o.orderDate BETWEEN '2005-03-01' AND '2005-03-31';
+cau3:
+	SELECT *
+	FROM orders
+	WHERE YEAR(orderDate)=(select YEAR(MAX(orderDate)) from orders) and MONTH(orderDate)=(select MONTH(MAX(orderDate)) from orders);
+Câu4:
+	SELECT *,(select (quantityOrdered*priceEach) from orderDetails od where orderNumber=o.orderNumber group by od.orderNumber) as total 
+	FROM orders o;
+Cau5:
+	SELECT o.*,(od.quantityOrdered*od.priceEach) as total 
+	FROM orders o INNER JOIN orderDetails od on o.orderNumber= od.orderNumber
+	GROUP BY o.orderNumber;use classicmodels;
+
+cau1:
+	SELECT productName 
+	FROM products 
+	WHERE productCode in (select distinct productCode 
+			       from orderDetails 
+			       where (select orderDate 
+				  from orders 
+				  where orderDate BETWEEN '2005-03-01' AND '2005-03-31' AND orderDetails.orderNumber=orders.orderNumber));
+cau2:
+	SELECT distinct p.productName
+	FROM products p
+	INNER JOIN  orderDetails od on p.productCode=od.productCode
+	INNER JOIN orders o on od.orderNumber=o.orderNumber
+	WHERE o.orderDate BETWEEN '2005-03-01' AND '2005-03-31';
+cau3:
+	SELECT *
+	FROM orders
+	WHERE YEAR(orderDate)=(select YEAR(MAX(orderDate)) from orders) and MONTH(orderDate)=(select MONTH(MAX(orderDate)) from orders);
+Câu4:
+	SELECT *,(select (quantityOrdered*priceEach) from orderDetails od where orderNumber=o.orderNumber group by od.orderNumber) as total 
+	FROM orders o;
+Cau5:
+	SELECT o.*,(od.quantityOrdered*od.priceEach) as total 
+	FROM orders o INNER JOIN orderDetails od on o.orderNumber= od.orderNumber
+	GROUP BY o.orderNumber;use classicmodels;
+
+cau1:
+	SELECT productName 
+	FROM products 
+	WHERE productCode in (select distinct productCode 
+			       from orderDetails 
+			       where (select orderDate 
+				  from orders 
+				  where orderDate BETWEEN '2005-03-01' AND '2005-03-31' AND orderDetails.orderNumber=orders.orderNumber));
+cau2:
+	SELECT distinct p.productName
+	FROM products p
+	INNER JOIN  orderDetails od on p.productCode=od.productCode
+	INNER JOIN orders o on od.orderNumber=o.orderNumber
+	WHERE o.orderDate BETWEEN '2005-03-01' AND '2005-03-31';
+cau3:
+	SELECT *
+	FROM orders
+	WHERE YEAR(orderDate)=(select YEAR(MAX(orderDate)) from orders) and MONTH(orderDate)=(select MONTH(MAX(orderDate)) from orders);
+Câu4:
+	SELECT *,(select (quantityOrdered*priceEach) from orderDetails od where orderNumber=o.orderNumber group by od.orderNumber) as total 
+	FROM orders o;
+Cau5:
+	SELECT o.*,(od.quantityOrdered*od.priceEach) as total 
+	FROM orders o INNER JOIN orderDetails od on o.orderNumber= od.orderNumber
+	GROUP BY o.orderNumber;use classicmodels;
+
+cau1:
+	SELECT productName 
+	FROM products 
+	WHERE productCode in (select distinct productCode 
+			       from orderDetails 
+			       where (select orderDate 
+				  from orders 
+				  where orderDate BETWEEN '2005-03-01' AND '2005-03-31' AND orderDetails.orderNumber=orders.orderNumber));
+cau2:
+	SELECT distinct p.productName
+	FROM products p
+	INNER JOIN  orderDetails od on p.productCode=od.productCode
+	INNER JOIN orders o on od.orderNumber=o.orderNumber
+	WHERE o.orderDate BETWEEN '2005-03-01' AND '2005-03-31';
+cau3:
+	SELECT *
+	FROM orders
+	WHERE YEAR(orderDate)=(select YEAR(MAX(orderDate)) from orders) and MONTH(orderDate)=(select MONTH(MAX(orderDate)) from orders);
+Câu4:
+	SELECT *,(select (quantityOrdered*priceEach) from orderDetails od where orderNumber=o.orderNumber group by od.orderNumber) as total 
+	FROM orders o;
+Cau5:
+	SELECT o.*,(od.quantityOrdered*od.priceEach) as total 
+	FROM orders o INNER JOIN orderDetails od on o.orderNumber= od.orderNumber
+	GROUP BY o.orderNumber;use classicmodels;
+
+cau1:
+	SELECT productName 
+	FROM products 
+	WHERE productCode in (select distinct productCode 
+			       from orderDetails 
+			       where (select orderDate 
+				  from orders 
+				  where orderDate BETWEEN '2005-03-01' AND '2005-03-31' AND orderDetails.orderNumber=orders.orderNumber));
+cau2:
+	SELECT distinct p.productName
+	FROM products p
+	INNER JOIN  orderDetails od on p.productCode=od.productCode
+	INNER JOIN orders o on od.orderNumber=o.orderNumber
+	WHERE o.orderDate BETWEEN '2005-03-01' AND '2005-03-31';
+cau3:
+	SELECT *
+	FROM orders
+	WHERE YEAR(orderDate)=(select YEAR(MAX(orderDate)) from orders) and MONTH(orderDate)=(select MONTH(MAX(orderDate)) from orders);
+Câu4:
+	SELECT *,(select (quantityOrdered*priceEach) from orderDetails od where orderNumber=o.orderNumber group by od.orderNumber) as total 
+	FROM orders o;
+Cau5:
+	SELECT o.*,(od.quantityOrdered*od.priceEach) as total 
+	FROM orders o INNER JOIN orderDetails od on o.orderNumber= od.orderNumber
+	GROUP BY o.orderNumber;use classicmodels;
+
+cau1:
+	SELECT productName 
+	FROM products 
+	WHERE productCode in (select distinct productCode 
+			       from orderDetails 
+			       where (select orderDate 
+				  from orders 
+				  where orderDate BETWEEN '2005-03-01' AND '2005-03-31' AND orderDetails.orderNumber=orders.orderNumber));
+cau2:
+	SELECT distinct p.productName
+	FROM products p
+	INNER JOIN  orderDetails od on p.productCode=od.productCode
+	INNER JOIN orders o on od.orderNumber=o.orderNumber
+	WHERE o.orderDate BETWEEN '2005-03-01' AND '2005-03-31';
+cau3:
+	SELECT *
+	FROM orders
+	WHERE YEAR(orderDate)=(select YEAR(MAX(orderDate)) from orders) and MONTH(orderDate)=(select MONTH(MAX(orderDate)) from orders);
+Câu4:
+	SELECT *,(select (quantityOrdered*priceEach) from orderDetails od where orderNumber=o.orderNumber group by od.orderNumber) as total 
+	FROM orders o;
+Cau5:
+	SELECT o.*,(od.quantityOrdered*od.priceEach) as total 
+	FROM orders o INNER JOIN orderDetails od on o.orderNumber= od.orderNumber
+	GROUP BY o.orderNumber;use classicmodels;
+
+cau1:
+	SELECT productName 
+	FROM products 
+	WHERE productCode in (select distinct productCode 
+			       from orderDetails 
+			       where (select orderDate 
+				  from orders 
+				  where orderDate BETWEEN '2005-03-01' AND '2005-03-31' AND orderDetails.orderNumber=orders.orderNumber));
+cau2:
+	SELECT distinct p.productName
+	FROM products p
+	INNER JOIN  orderDetails od on p.productCode=od.productCode
+	INNER JOIN orders o on od.orderNumber=o.orderNumber
+	WHERE o.orderDate BETWEEN '2005-03-01' AND '2005-03-31';
+cau3:
+	SELECT *
+	FROM orders
+	WHERE YEAR(orderDate)=(select YEAR(MAX(orderDate)) from orders) and MONTH(orderDate)=(select MONTH(MAX(orderDate)) from orders);
+Câu4:
+	SELECT *,(select (quantityOrdered*priceEach) from orderDetails od where orderNumber=o.orderNumber group by od.orderNumber) as total 
+	FROM orders o;
+Cau5:
+	SELECT o.*,(od.quantityOrdered*od.priceEach) as total 
+	FROM orders o INNER JOIN orderDetails od on o.orderNumber= od.orderNumber
+	GROUP BY o.orderNumber;use classicmodels;
+
+cau1:
+	SELECT productName 
+	FROM products 
+	WHERE productCode in (select distinct productCode 
+			       from orderDetails 
+			       where (select orderDate 
+				  from orders 
+				  where orderDate BETWEEN '2005-03-01' AND '2005-03-31' AND orderDetails.orderNumber=orders.orderNumber));
+cau2:
+	SELECT distinct p.productName
+	FROM products p
+	INNER JOIN  orderDetails od on p.productCode=od.productCode
+	INNER JOIN orders o on od.orderNumber=o.orderNumber
+	WHERE o.orderDate BETWEEN '2005-03-01' AND '2005-03-31';
+cau3:
+	SELECT *
+	FROM orders
+	WHERE YEAR(orderDate)=(select YEAR(MAX(orderDate)) from orders) and MONTH(orderDate)=(select MONTH(MAX(orderDate)) from orders);
+Câu4:
+	SELECT *,(select (quantityOrdered*priceEach) from orderDetails od where orderNumber=o.orderNumber group by od.orderNumber) as total 
+	FROM orders o;
+Cau5:
+	SELECT o.*,(od.quantityOrdered*od.priceEach) as total 
+	FROM orders o INNER JOIN orderDetails od on o.orderNumber= od.orderNumber
+	GROUP BY o.orderNumber;use classicmodels;
+
+cau1:
+	SELECT productName 
+	FROM products 
+	WHERE productCode in (select distinct productCode 
+			       from orderDetails 
+			       where (select orderDate 
+				  from orders 
+				  where orderDate BETWEEN '2005-03-01' AND '2005-03-31' AND orderDetails.orderNumber=orders.orderNumber));
+cau2:
+	SELECT distinct p.productName
+	FROM products p
+	INNER JOIN  orderDetails od on p.productCode=od.productCode
+	INNER JOIN orders o on od.orderNumber=o.orderNumber
+	WHERE o.orderDate BETWEEN '2005-03-01' AND '2005-03-31';
+cau3:
+	SELECT *
+	FROM orders
+	WHERE YEAR(orderDate)=(select YEAR(MAX(orderDate)) from orders) and MONTH(orderDate)=(select MONTH(MAX(orderDate)) from orders);
+Câu4:
+	SELECT *,(select (quantityOrdered*priceEach) from orderDetails od where orderNumber=o.orderNumber group by od.orderNumber) as total 
+	FROM orders o;
+Cau5:
+	SELECT o.*,(od.quantityOrdered*od.priceEach) as total 
+	FROM orders o INNER JOIN orderDetails od on o.orderNumber= od.orderNumber
+	GROUP BY o.orderNumber;use classicmodels;
+
+cau1:
+	SELECT productName 
+	FROM products 
+	WHERE productCode in (select distinct productCode 
+			       from orderDetails 
+			       where (select orderDate 
+				  from orders 
+				  where orderDate BETWEEN '2005-03-01' AND '2005-03-31' AND orderDetails.orderNumber=orders.orderNumber));
+cau2:
+	SELECT distinct p.productName
+	FROM products p
+	INNER JOIN  orderDetails od on p.productCode=od.productCode
+	INNER JOIN orders o on od.orderNumber=o.orderNumber
+	WHERE o.orderDate BETWEEN '2005-03-01' AND '2005-03-31';
+cau3:
+	SELECT *
+	FROM orders
+	WHERE YEAR(orderDate)=(select YEAR(MAX(orderDate)) from orders) and MONTH(orderDate)=(select MONTH(MAX(orderDate)) from orders);
+Câu4:
+	SELECT *,(select (quantityOrdered*priceEach) from orderDetails od where orderNumber=o.orderNumber group by od.orderNumber) as total 
+	FROM orders o;
+Cau5:
+	SELECT o.*,(od.quantityOrdered*od.priceEach) as total 
+	FROM orders o INNER JOIN orderDetails od on o.orderNumber= od.orderNumber
+	GROUP BY o.orderNumber;use classicmodels;
+
+cau1:
+	SELECT productName 
+	FROM products 
+	WHERE productCode in (select distinct productCode 
+			       from orderDetails 
+			       where (select orderDate 
+				  from orders 
+				  where orderDate BETWEEN '2005-03-01' AND '2005-03-31' AND orderDetails.orderNumber=orders.orderNumber));
+cau2:
+	SELECT distinct p.productName
+	FROM products p
+	INNER JOIN  orderDetails od on p.productCode=od.productCode
+	INNER JOIN orders o on od.orderNumber=o.orderNumber
+	WHERE o.orderDate BETWEEN '2005-03-01' AND '2005-03-31';
+cau3:
+	SELECT *
+	FROM orders
+	WHERE YEAR(orderDate)=(select YEAR(MAX(orderDate)) from orders) and MONTH(orderDate)=(select MONTH(MAX(orderDate)) from orders);
+Câu4:
+	SELECT *,(select (quantityOrdered*priceEach) from orderDetails od where orderNumber=o.orderNumber group by od.orderNumber) as total 
+	FROM orders o;
+Cau5:
+	SELECT o.*,(od.quantityOrdered*od.priceEach) as total 
+	FROM orders o INNER JOIN orderDetails od on o.orderNumber= od.orderNumber
+	GROUP BY o.orderNumber;use classicmodels;
+
+cau1:
+	SELECT productName 
+	FROM products 
+	WHERE productCode in (select distinct productCode 
+			       from orderDetails 
+			       where (select orderDate 
+				  from orders 
+				  where orderDate BETWEEN '2005-03-01' AND '2005-03-31' AND orderDetails.orderNumber=orders.orderNumber));
+cau2:
+	SELECT distinct p.productName
+	FROM products p
+	INNER JOIN  orderDetails od on p.productCode=od.productCode
+	INNER JOIN orders o on od.orderNumber=o.orderNumber
+	WHERE o.orderDate BETWEEN '2005-03-01' AND '2005-03-31';
+cau3:
+	SELECT *
+	FROM orders
+	WHERE YEAR(orderDate)=(select YEAR(MAX(orderDate)) from orders) and MONTH(orderDate)=(select MONTH(MAX(orderDate)) from orders);
+Câu4:
+	SELECT *,(select (quantityOrdered*priceEach) from orderDetails od where orderNumber=o.orderNumber group by od.orderNumber) as total 
+	FROM orders o;
+Cau5:
+	SELECT o.*,(od.quantityOrdered*od.priceEach) as total 
+	FROM orders o INNER JOIN orderDetails od on o.orderNumber= od.orderNumber
+	GROUP BY o.orderNumber;use classicmodels;
+
+cau1:
+	SELECT productName 
+	FROM products 
+	WHERE productCode in (select distinct productCode 
+			       from orderDetails 
+			       where (select orderDate 
+				  from orders 
+				  where orderDate BETWEEN '2005-03-01' AND '2005-03-31' AND orderDetails.orderNumber=orders.orderNumber));
+cau2:
+	SELECT distinct p.productName
+	FROM products p
+	INNER JOIN  orderDetails od on p.productCode=od.productCode
+	INNER JOIN orders o on od.orderNumber=o.orderNumber
+	WHERE o.orderDate BETWEEN '2005-03-01' AND '2005-03-31';
+cau3:
+	SELECT *
+	FROM orders
+	WHERE YEAR(orderDate)=(select YEAR(MAX(orderDate)) from orders) and MONTH(orderDate)=(select MONTH(MAX(orderDate)) from orders);
+Câu4:
+	SELECT *,(select (quantityOrdered*priceEach) from orderDetails od where orderNumber=o.orderNumber group by od.orderNumber) as total 
+	FROM orders o;
+Cau5:
+	SELECT o.*,(od.quantityOrdered*od.priceEach) as total 
+	FROM orders o INNER JOIN orderDetails od on o.orderNumber= od.orderNumber
+	GROUP BY o.orderNumber;use classicmodels;
+
+cau1:
+	SELECT productName 
+	FROM products 
+	WHERE productCode in (select distinct productCode 
+			       from orderDetails 
+			       where (select orderDate 
+				  from orders 
+				  where orderDate BETWEEN '2005-03-01' AND '2005-03-31' AND orderDetails.orderNumber=orders.orderNumber));
+cau2:
+	SELECT distinct p.productName
+	FROM products p
+	INNER JOIN  orderDetails od on p.productCode=od.productCode
+	INNER JOIN orders o on od.orderNumber=o.orderNumber
+	WHERE o.orderDate BETWEEN '2005-03-01' AND '2005-03-31';
+cau3:
+	SELECT *
+	FROM orders
+	WHERE YEAR(orderDate)=(select YEAR(MAX(orderDate)) from orders) and MONTH(orderDate)=(select MONTH(MAX(orderDate)) from orders);
+Câu4:
+	SELECT *,(select (quantityOrdered*priceEach) from orderDetails od where orderNumber=o.orderNumber group by od.orderNumber) as total 
+	FROM orders o;
+Cau5:
+	SELECT o.*,(od.quantityOrdered*od.priceEach) as total 
+	FROM orders o INNER JOIN orderDetails od on o.orderNumber= od.orderNumber
+	GROUP BY o.orderNumber;use classicmodels;
+
+cau1:
+	SELECT productName 
+	FROM products 
+	WHERE productCode in (select distinct productCode 
+			       from orderDetails 
+			       where (select orderDate 
+				  from orders 
+				  where orderDate BETWEEN '2005-03-01' AND '2005-03-31' AND orderDetails.orderNumber=orders.orderNumber));
+cau2:
+	SELECT distinct p.productName
+	FROM products p
+	INNER JOIN  orderDetails od on p.productCode=od.productCode
+	INNER JOIN orders o on od.orderNumber=o.orderNumber
+	WHERE o.orderDate BETWEEN '2005-03-01' AND '2005-03-31';
+cau3:
+	SELECT *
+	FROM orders
+	WHERE YEAR(orderDate)=(select YEAR(MAX(orderDate)) from orders) and MONTH(orderDate)=(select MONTH(MAX(orderDate)) from orders);
+Câu4:
+	SELECT *,(select (quantityOrdered*priceEach) from orderDetails od where orderNumber=o.orderNumber group by od.orderNumber) as total 
+	FROM orders o;
+Cau5:
+	SELECT o.*,(od.quantityOrdered*od.priceEach) as total 
+	FROM orders o INNER JOIN orderDetails od on o.orderNumber= od.orderNumber
+	GROUP BY o.orderNumber;use classicmodels;
+
+cau1:
+	SELECT productName 
+	FROM products 
+	WHERE productCode in (select distinct productCode 
+			       from orderDetails 
+			       where (select orderDate 
+				  from orders 
+				  where orderDate BETWEEN '2005-03-01' AND '2005-03-31' AND orderDetails.orderNumber=orders.orderNumber));
+cau2:
+	SELECT distinct p.productName
+	FROM products p
+	INNER JOIN  orderDetails od on p.productCode=od.productCode
+	INNER JOIN orders o on od.orderNumber=o.orderNumber
+	WHERE o.orderDate BETWEEN '2005-03-01' AND '2005-03-31';
+cau3:
+	SELECT *
+	FROM orders
+	WHERE YEAR(orderDate)=(select YEAR(MAX(orderDate)) from orders) and MONTH(orderDate)=(select MONTH(MAX(orderDate)) from orders);
+Câu4:
+	SELECT *,(select (quantityOrdered*priceEach) from orderDetails od where orderNumber=o.orderNumber group by od.orderNumber) as total 
+	FROM orders o;
+Cau5:
+	SELECT o.*,(od.quantityOrdered*od.priceEach) as total 
+	FROM orders o INNER JOIN orderDetails od on o.orderNumber= od.orderNumber
+	GROUP BY o.orderNumber;use classicmodels;
+
+cau1:
+	SELECT productName 
+	FROM products 
+	WHERE productCode in (select distinct productCode 
+			       from orderDetails 
+			       where (select orderDate 
+				  from orders 
+				  where orderDate BETWEEN '2005-03-01' AND '2005-03-31' AND orderDetails.orderNumber=orders.orderNumber));
+cau2:
+	SELECT distinct p.productName
+	FROM products p
+	INNER JOIN  orderDetails od on p.productCode=od.productCode
+	INNER JOIN orders o on od.orderNumber=o.orderNumber
+	WHERE o.orderDate BETWEEN '2005-03-01' AND '2005-03-31';
+cau3:
+	SELECT *
+	FROM orders
+	WHERE YEAR(orderDate)=(select YEAR(MAX(orderDate)) from orders) and MONTH(orderDate)=(select MONTH(MAX(orderDate)) from orders);
+Câu4:
+	SELECT *,(select (quantityOrdered*priceEach) from orderDetails od where orderNumber=o.orderNumber group by od.orderNumber) as total 
+	FROM orders o;
+Cau5:
+	SELECT o.*,(od.quantityOrdered*od.priceEach) as total 
+	FROM orders o INNER JOIN orderDetails od on o.orderNumber= od.orderNumber
+	GROUP BY o.orderNumber;use classicmodels;
+
+cau1:
+	SELECT productName 
+	FROM products 
+	WHERE productCode in (select distinct productCode 
+			       from orderDetails 
+			       where (select orderDate 
+				  from orders 
+				  where orderDate BETWEEN '2005-03-01' AND '2005-03-31' AND orderDetails.orderNumber=orders.orderNumber));
+cau2:
+	SELECT distinct p.productName
+	FROM products p
+	INNER JOIN  orderDetails od on p.productCode=od.productCode
+	INNER JOIN orders o on od.orderNumber=o.orderNumber
+	WHERE o.orderDate BETWEEN '2005-03-01' AND '2005-03-31';
+cau3:
+	SELECT *
+	FROM orders
+	WHERE YEAR(orderDate)=(select YEAR(MAX(orderDate)) from orders) and MONTH(orderDate)=(select MONTH(MAX(orderDate)) from orders);
+Câu4:
+	SELECT *,(select (quantityOrdered*priceEach) from orderDetails od where orderNumber=o.orderNumber group by od.orderNumber) as total 
+	FROM orders o;
+Cau5:
+	SELECT o.*,(od.quantityOrdered*od.priceEach) as total 
+	FROM orders o INNER JOIN orderDetails od on o.orderNumber= od.orderNumber
+	GROUP BY o.orderNumber;use classicmodels;
+
+cau1:
+	SELECT productName 
+	FROM products 
+	WHERE productCode in (select distinct productCode 
+			       from orderDetails 
+			       where (select orderDate 
+				  from orders 
+				  where orderDate BETWEEN '2005-03-01' AND '2005-03-31' AND orderDetails.orderNumber=orders.orderNumber));
+cau2:
+	SELECT distinct p.productName
+	FROM products p
+	INNER JOIN  orderDetails od on p.productCode=od.productCode
+	INNER JOIN orders o on od.orderNumber=o.orderNumber
+	WHERE o.orderDate BETWEEN '2005-03-01' AND '2005-03-31';
+cau3:
+	SELECT *
+	FROM orders
+	WHERE YEAR(orderDate)=(select YEAR(MAX(orderDate)) from orders) and MONTH(orderDate)=(select MONTH(MAX(orderDate)) from orders);
+Câu4:
+	SELECT *,(select (quantityOrdered*priceEach) from orderDetails od where orderNumber=o.orderNumber group by od.orderNumber) as total 
+	FROM orders o;
+Cau5:
+	SELECT o.*,(od.quantityOrdered*od.priceEach) as total 
+	FROM orders o INNER JOIN orderDetails od on o.orderNumber= od.orderNumber
+	GROUP BY o.orderNumber;use classicmodels;
+
+cau1:
+	SELECT productName 
+	FROM products 
+	WHERE productCode in (select distinct productCode 
+			       from orderDetails 
+			       where (select orderDate 
+				  from orders 
+				  where orderDate BETWEEN '2005-03-01' AND '2005-03-31' AND orderDetails.orderNumber=orders.orderNumber));
+cau2:
+	SELECT distinct p.productName
+	FROM products p
+	INNER JOIN  orderDetails od on p.productCode=od.productCode
+	INNER JOIN orders o on od.orderNumber=o.orderNumber
+	WHERE o.orderDate BETWEEN '2005-03-01' AND '2005-03-31';
+cau3:
+	SELECT *
+	FROM orders
+	WHERE YEAR(orderDate)=(select YEAR(MAX(orderDate)) from orders) and MONTH(orderDate)=(select MONTH(MAX(orderDate)) from orders);
+Câu4:
+	SELECT *,(select (quantityOrdered*priceEach) from orderDetails od where orderNumber=o.orderNumber group by od.orderNumber) as total 
+	FROM orders o;
+Cau5:
+	SELECT o.*,(od.quantityOrdered*od.priceEach) as total 
+	FROM orders o INNER JOIN orderDetails od on o.orderNumber= od.orderNumber
+	GROUP BY o.orderNumber;use classicmodels;
+
+cau1:
+	SELECT productName 
+	FROM products 
+	WHERE productCode in (select distinct productCode 
+			       from orderDetails 
+			       where (select orderDate 
+				  from orders 
+				  where orderDate BETWEEN '2005-03-01' AND '2005-03-31' AND orderDetails.orderNumber=orders.orderNumber));
+cau2:
+	SELECT distinct p.productName
+	FROM products p
+	INNER JOIN  orderDetails od on p.productCode=od.productCode
+	INNER JOIN orders o on od.orderNumber=o.orderNumber
+	WHERE o.orderDate BETWEEN '2005-03-01' AND '2005-03-31';
+cau3:
+	SELECT *
+	FROM orders
+	WHERE YEAR(orderDate)=(select YEAR(MAX(orderDate)) from orders) and MONTH(orderDate)=(select MONTH(MAX(orderDate)) from orders);
+Câu4:
+	SELECT *,(select (quantityOrdered*priceEach) from orderDetails od where orderNumber=o.orderNumber group by od.orderNumber) as total 
+	FROM orders o;
+Cau5:
+	SELECT o.*,(od.quantityOrdered*od.priceEach) as total 
+	FROM orders o INNER JOIN orderDetails od on o.orderNumber= od.orderNumber
+	GROUP BY o.orderNumber;use classicmodels;
+
+cau1:
+	SELECT productName 
+	FROM products 
+	WHERE productCode in (select distinct productCode 
+			       from orderDetails 
+			       where (select orderDate 
+				  from orders 
+				  where orderDate BETWEEN '2005-03-01' AND '2005-03-31' AND orderDetails.orderNumber=orders.orderNumber));
+cau2:
+	SELECT distinct p.productName
+	FROM products p
+	INNER JOIN  orderDetails od on p.productCode=od.productCode
+	INNER JOIN orders o on od.orderNumber=o.orderNumber
+	WHERE o.orderDate BETWEEN '2005-03-01' AND '2005-03-31';
+cau3:
+	SELECT *
+	FROM orders
+	WHERE YEAR(orderDate)=(select YEAR(MAX(orderDate)) from orders) and MONTH(orderDate)=(select MONTH(MAX(orderDate)) from orders);
+Câu4:
+	SELECT *,(select (quantityOrdered*priceEach) from orderDetails od where orderNumber=o.orderNumber group by od.orderNumber) as total 
+	FROM orders o;
+Cau5:
+	SELECT o.*,(od.quantityOrdered*od.priceEach) as total 
+	FROM orders o INNER JOIN orderDetails od on o.orderNumber= od.orderNumber
+	GROUP BY o.orderNumber;use classicmodels;
+
+cau1:
+	SELECT productName 
+	FROM products 
+	WHERE productCode in (select distinct productCode 
+			       from orderDetails 
+			       where (select orderDate 
+				  from orders 
+				  where orderDate BETWEEN '2005-03-01' AND '2005-03-31' AND orderDetails.orderNumber=orders.orderNumber));
+cau2:
+	SELECT distinct p.productName
+	FROM products p
+	INNER JOIN  orderDetails od on p.productCode=od.productCode
+	INNER JOIN orders o on od.orderNumber=o.orderNumber
+	WHERE o.orderDate BETWEEN '2005-03-01' AND '2005-03-31';
+cau3:
+	SELECT *
+	FROM orders
+	WHERE YEAR(orderDate)=(select YEAR(MAX(orderDate)) from orders) and MONTH(orderDate)=(select MONTH(MAX(orderDate)) from orders);
+Câu4:
+	SELECT *,(select (quantityOrdered*priceEach) from orderDetails od where orderNumber=o.orderNumber group by od.orderNumber) as total 
+	FROM orders o;
+Cau5:
+	SELECT o.*,(od.quantityOrdered*od.priceEach) as total 
+	FROM orders o INNER JOIN orderDetails od on o.orderNumber= od.orderNumber
+	GROUP BY o.orderNumber;use classicmodels;
+
+cau1:
+	SELECT productName 
+	FROM products 
+	WHERE productCode in (select distinct productCode 
+			       from orderDetails 
+			       where (select orderDate 
+				  from orders 
+				  where orderDate BETWEEN '2005-03-01' AND '2005-03-31' AND orderDetails.orderNumber=orders.orderNumber));
+cau2:
+	SELECT distinct p.productName
+	FROM products p
+	INNER JOIN  orderDetails od on p.productCode=od.productCode
+	INNER JOIN orders o on od.orderNumber=o.orderNumber
+	WHERE o.orderDate BETWEEN '2005-03-01' AND '2005-03-31';
+cau3:
+	SELECT *
+	FROM orders
+	WHERE YEAR(orderDate)=(select YEAR(MAX(orderDate)) from orders) and MONTH(orderDate)=(select MONTH(MAX(orderDate)) from orders);
+Câu4:
+	SELECT *,(select (quantityOrdered*priceEach) from orderDetails od where orderNumber=o.orderNumber group by od.orderNumber) as total 
+	FROM orders o;
+Cau5:
+	SELECT o.*,(od.quantityOrdered*od.priceEach) as total 
+	FROM orders o INNER JOIN orderDetails od on o.orderNumber= od.orderNumber
+	GROUP BY o.orderNumber;use classicmodels;
+
+cau1:
+	SELECT productName 
+	FROM products 
+	WHERE productCode in (select distinct productCode 
+			       from orderDetails 
+			       where (select orderDate 
+				  from orders 
+				  where orderDate BETWEEN '2005-03-01' AND '2005-03-31' AND orderDetails.orderNumber=orders.orderNumber));
+cau2:
+	SELECT distinct p.productName
+	FROM products p
+	INNER JOIN  orderDetails od on p.productCode=od.productCode
+	INNER JOIN orders o on od.orderNumber=o.orderNumber
+	WHERE o.orderDate BETWEEN '2005-03-01' AND '2005-03-31';
+cau3:
+	SELECT *
+	FROM orders
+	WHERE YEAR(orderDate)=(select YEAR(MAX(orderDate)) from orders) and MONTH(orderDate)=(select MONTH(MAX(orderDate)) from orders);
+Câu4:
+	SELECT *,(select (quantityOrdered*priceEach) from orderDetails od where orderNumber=o.orderNumber group by od.orderNumber) as total 
+	FROM orders o;
+Cau5:
+	SELECT o.*,(od.quantityOrdered*od.priceEach) as total 
+	FROM orders o INNER JOIN orderDetails od on o.orderNumber= od.orderNumber
+	GROUP BY o.orderNumber;use classicmodels;
+
+cau1:
+	SELECT productName 
+	FROM products 
+	WHERE productCode in (select distinct productCode 
+			       from orderDetails 
+			       where (select orderDate 
+				  from orders 
+				  where orderDate BETWEEN '2005-03-01' AND '2005-03-31' AND orderDetails.orderNumber=orders.orderNumber));
+cau2:
+	SELECT distinct p.productName
+	FROM products p
+	INNER JOIN  orderDetails od on p.productCode=od.productCode
+	INNER JOIN orders o on od.orderNumber=o.orderNumber
+	WHERE o.orderDate BETWEEN '2005-03-01' AND '2005-03-31';
+cau3:
+	SELECT *
+	FROM orders
+	WHERE YEAR(orderDate)=(select YEAR(MAX(orderDate)) from orders) and MONTH(orderDate)=(select MONTH(MAX(orderDate)) from orders);
+Câu4:
+	SELECT *,(select (quantityOrdered*priceEach) from orderDetails od where orderNumber=o.orderNumber group by od.orderNumber) as total 
+	FROM orders o;
+Cau5:
+	SELECT o.*,(od.quantityOrdered*od.priceEach) as total 
+	FROM orders o INNER JOIN orderDetails od on o.orderNumber= od.orderNumber
+	GROUP BY o.orderNumber;use classicmodels;
+
+cau1:
+	SELECT productName 
+	FROM products 
+	WHERE productCode in (select distinct productCode 
+			       from orderDetails 
+			       where (select orderDate 
+				  from orders 
+				  where orderDate BETWEEN '2005-03-01' AND '2005-03-31' AND orderDetails.orderNumber=orders.orderNumber));
+cau2:
+	SELECT distinct p.productName
+	FROM products p
+	INNER JOIN  orderDetails od on p.productCode=od.productCode
+	INNER JOIN orders o on od.orderNumber=o.orderNumber
+	WHERE o.orderDate BETWEEN '2005-03-01' AND '2005-03-31';
+cau3:
+	SELECT *
+	FROM orders
+	WHERE YEAR(orderDate)=(select YEAR(MAX(orderDate)) from orders) and MONTH(orderDate)=(select MONTH(MAX(orderDate)) from orders);
+Câu4:
+	SELECT *,(select (quantityOrdered*priceEach) from orderDetails od where orderNumber=o.orderNumber group by od.orderNumber) as total 
+	FROM orders o;
+Cau5:
+	SELECT o.*,(od.quantityOrdered*od.priceEach) as total 
+	FROM orders o INNER JOIN orderDetails od on o.orderNumber= od.orderNumber
+	GROUP BY o.orderNumber;use classicmodels;
+
+cau1:
+	SELECT productName 
+	FROM products 
+	WHERE productCode in (select distinct productCode 
+			       from orderDetails 
+			       where (select orderDate 
+				  from orders 
+				  where orderDate BETWEEN '2005-03-01' AND '2005-03-31' AND orderDetails.orderNumber=orders.orderNumber));
+cau2:
+	SELECT distinct p.productName
+	FROM products p
+	INNER JOIN  orderDetails od on p.productCode=od.productCode
+	INNER JOIN orders o on od.orderNumber=o.orderNumber
+	WHERE o.orderDate BETWEEN '2005-03-01' AND '2005-03-31';
+cau3:
+	SELECT *
+	FROM orders
+	WHERE YEAR(orderDate)=(select YEAR(MAX(orderDate)) from orders) and MONTH(orderDate)=(select MONTH(MAX(orderDate)) from orders);
+Câu4:
+	SELECT *,(select (quantityOrdered*priceEach) from orderDetails od where orderNumber=o.orderNumber group by od.orderNumber) as total 
+	FROM orders o;
+Cau5:
+	SELECT o.*,(od.quantityOrdered*od.priceEach) as total 
+	FROM orders o INNER JOIN orderDetails od on o.orderNumber= od.orderNumber
+	GROUP BY o.orderNumber;use classicmodels;
+
+cau1:
+	SELECT productName 
+	FROM products 
+	WHERE productCode in (select distinct productCode 
+			       from orderDetails 
+			       where (select orderDate 
+				  from orders 
+				  where orderDate BETWEEN '2005-03-01' AND '2005-03-31' AND orderDetails.orderNumber=orders.orderNumber));
+cau2:
+	SELECT distinct p.productName
+	FROM products p
+	INNER JOIN  orderDetails od on p.productCode=od.productCode
+	INNER JOIN orders o on od.orderNumber=o.orderNumber
+	WHERE o.orderDate BETWEEN '2005-03-01' AND '2005-03-31';
+cau3:
+	SELECT *
+	FROM orders
+	WHERE YEAR(orderDate)=(select YEAR(MAX(orderDate)) from orders) and MONTH(orderDate)=(select MONTH(MAX(orderDate)) from orders);
+Câu4:
+	SELECT *,(select (quantityOrdered*priceEach) from orderDetails od where orderNumber=o.orderNumber group by od.orderNumber) as total 
+	FROM orders o;
+Cau5:
+	SELECT o.*,(od.quantityOrdered*od.priceEach) as total 
+	FROM orders o INNER JOIN orderDetails od on o.orderNumber= od.orderNumber
+	GROUP BY o.orderNumber;use classicmodels;
+
+cau1:
+	SELECT productName 
+	FROM products 
+	WHERE productCode in (select distinct productCode 
+			       from orderDetails 
+			       where (select orderDate 
+				  from orders 
+				  where orderDate BETWEEN '2005-03-01' AND '2005-03-31' AND orderDetails.orderNumber=orders.orderNumber));
+cau2:
+	SELECT distinct p.productName
+	FROM products p
+	INNER JOIN  orderDetails od on p.productCode=od.productCode
+	INNER JOIN orders o on od.orderNumber=o.orderNumber
+	WHERE o.orderDate BETWEEN '2005-03-01' AND '2005-03-31';
+cau3:
+	SELECT *
+	FROM orders
+	WHERE YEAR(orderDate)=(select YEAR(MAX(orderDate)) from orders) and MONTH(orderDate)=(select MONTH(MAX(orderDate)) from orders);
+Câu4:
+	SELECT *,(select (quantityOrdered*priceEach) from orderDetails od where orderNumber=o.orderNumber group by od.orderNumber) as total 
+	FROM orders o;
+Cau5:
+	SELECT o.*,(od.quantityOrdered*od.priceEach) as total 
+	FROM orders o INNER JOIN orderDetails od on o.orderNumber= od.orderNumber
+	GROUP BY o.orderNumber;
+ 
+
+void ReversePrint() {
+    struct Node* temp = tail;
+    if(temp == NULL) return;
+    printf("\nReverse: ");
+    while(temp != NULL) {
+        printf("%d ",temp->data);
+        temp = temp->prev;
+    }
+    printf("\n");
+}
+ 
+int main() {
+ 
+    head = NULL; 
+
+    InsertAtTail(2);
+    Print(); ReversePrint();
+    InsertAtTail(4);
+    Print(); ReversePrint();
+    InsertAtHead(6);
+    Print(); ReversePrint();
+    InsertAtTail(8);
+    Print(); ReversePrint();
+    DeleteAtHead();
+    Print(); ReversePrint();
+    DeleteAtTail();
+    Print(); ReversePrint();
+}cars": [ { "name":"Ford", "models":[ "Fiesta", "Focus", "Mustang" ] }, { "name":"BMW", "models":[ "320", "X3" ] } ] }, { "name":"Maria", "age":25, "cars": [ { "name":"Fiat", "models":[ "500", "Panda" ] } ] }, { "name":"David", "age":40, "cars": [ { "name":"Ford", "models":[ "Fiesta", "Focus", "Mustang" ] }, { "name":"BMW", "models":[ "320", "X3", "X5" ] }, { "name":"Fiat", "models":[ "500", "Panda" ] } ] } ]s
