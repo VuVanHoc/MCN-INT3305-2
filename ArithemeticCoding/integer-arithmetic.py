@@ -282,6 +282,6 @@ print("type is: ", type(encbytes))
 assert(type(encbytes) == bytes)
 assert(isinstance(info, object))
 
-# check decoder output format
+# check decoder output's format
 out = decode(encbytes, info)
 assert(type(out) == bytes)
