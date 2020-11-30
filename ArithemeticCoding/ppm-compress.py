@@ -1,43 +1,31 @@
-#
-# Compression application using prediction by partial matching (PPM) with arithmetic coding
-#
-# Usage: python ppm-compress.py InputFile OutputFile
-# Then use the corresponding ppm-decompress.py application to recreate the original input file.
-# Note that both the compressor and decompressor need to use the same PPM context modeling logic.
-# The PPM algorithm can be thought of as a powerful generalization of adaptive arithmetic coding.
-#
-# Copyright (c) Project Nayuki
-#
-# https://www.nayuki.io/page/reference-arithmetic-coding
-# https://github.com/nayuki/Reference-arithmetic-coding
-#
+import contextlib
+import sys
 
-import contextlib, sys
-import arithmeticcoding, ppmmodel
+import arithmeticcoding
+import ppmmodel
+import hashlib
+import os
+import time
+from datetime import timedelta
 
 # Must be at least -1 and match ppm-decompress.py. Warning: Exponential memory usage at O(257^n).
 MODEL_ORDER = 3
 
 
 # Command line main application function.
-def main(args):
-    # Handle command line arguments
-    if len(args) != 2:
-        sys.exit("Usage: python ppm-compress.py InputFile OutputFile")
-    inputfile = args[0]
-    outputfile = args[1]
-
+def main(inputFile, outputFile):
     # Perform file compression
-    with open(inputfile, "rb") as inp, \
-            contextlib.closing(arithmeticcoding.BitOutputStream(open(outputfile, "wb"))) as bitout:
-        compress(inp, bitout)
+    with open(inputFile, "rb") as inp, \
+            contextlib.closing(arithmeticcoding.BitOutputStream(open(outputFile, "wb"))) as bitOut:
+        compress(inp, bitOut)
+    print("PPM Compress Success !!!")
 
 
-def compress(inp, bitout):
+def compress(inp, bitOut):
     # Set up encoder and model. In this PPM model, symbol 256 represents EOF;
     # its frequency is 1 in the order -1 context but its frequency
     # is 0 in all other contexts (which have non-negative order).
-    enc = arithmeticcoding.ArithmeticEncoder(32, bitout)
+    enc = arithmeticcoding.ArithmeticEncoder(32, bitOut)
     model = ppmmodel.PpmModel(MODEL_ORDER, 257, 256)
     history = []
 
@@ -84,4 +72,36 @@ def encode_symbol(model, history, symbol, enc):
 
 # Main launcher
 if __name__ == "__main__":
-    main(sys.argv[1:])
+    # main(sys.argv[1:])
+    absolute_path = os.path.dirname(os.path.abspath("main.py"))
+
+    original_file_folder = absolute_path + "/OriginalFiles/"
+    compressed_file_folder = absolute_path + "/CompressedFiles/"
+
+    input_file_name = input("Enter your filename: ")
+    input_file = original_file_folder + input_file_name
+    print("Input filename: " + input_file)
+
+    # Get size of file input
+    file_stats_input = os.stat(input_file)
+    print(f'Input filename Size in Bytes is {file_stats_input.st_size}')
+
+    output_file = compressed_file_folder + input_file_name + "_ppm_compressed"
+    if not os.path.exists(output_file):
+        open(output_file, 'w')
+
+    start_time = time.time()
+
+    main(input_file, output_file)
+
+    elapsed_time_secs = time.time() - start_time
+
+    # Get size of file output
+    file_stats_output = os.stat(output_file)
+    print(f'Output filename Size in Bytes is {file_stats_output.st_size}')
+
+    print("Ti le: ", file_stats_output.st_size / file_stats_input.st_size)
+
+    # Get time execution
+    msg = "Execution took: %s secs (Wall clock time)" % timedelta(milliseconds=round(elapsed_time_secs))
+    print(msg)
